@@ -1,0 +1,45 @@
+{
+  "Footer": {
+    "title": "Read. Code. Repeat",
+    "description": "Thư Viện Sách Dành Cho Cộng Đồng Lập Trình Viên",
+    "social": {
+      "facebook": "https://www.facebook.com/omegadevvn",
+      "twitter": "https://twitter.com/omegadevvn",
+      "youtube": "https://www.youtube.com/channel/UC9vLsnF6QPYuHd4jzVJb9Rg",
+      "github": ""
+    },
+    "rightsReserved": "Bản quyền thuộc về Omega.dev",
+    "aboutUs": {
+      "title": "Về Chúng Tôi",
+      "whoWeAre": "Giới thiệu chung",
+      "historical": "Lịch sử",
+      "teams": "Đội ngũ",
+      "VisionAndMission": "Tầm nhìn và sứ mệnh",
+      "contactUs": "Liên Hệ"
+    },
+    "privacyPolicy": {
+      "title": "Chính Sách Bảo Mật",
+      "informationSecurity": "Bảo mật thông tin",
+      "cookiePolicy": "Chính Sách Cookie",
+      "informationSharing": "Chia sẻ thông tin",
+      "legalCompliance": "Tuân thủ pháp luật",
+      "changesToThePrivacyPolicy": "Thay đổi chính sách bảo mật"
+    },
+    "help&Support": {
+      "title": "Hỗ trợ & Trợ giúp",
+      "customerSupport": "Hỗ trợ khách hàng",
+      "troubleshooting": "Khắc phục sự cố",
+      "reportAProblem": "Báo cáo sự cố",
+      "feedback": "Phản hồi",
+      "FAQs": "FAQs"
+    },
+    "termsOfService": {
+      "title": "Điều Khoản Dịch Vụ",
+      "termsOfUse": "Điều khoản sử dụng",
+      "paymentTerms": "Điều khoản thanh toán",
+      "serviceLevelAgreement": "Thỏa thuận cấp dịch vụ",
+      "serviceScope": "Phạm vi dịch vụ",
+      "refundPolicy": "Chính sách hoàn tiền"
+    }
+  }
+}
