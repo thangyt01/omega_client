@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+
+    - name: Install dependencies
+      run: yarn
+
+    - name: Lint
+      run: yarn lint
+
+    - name: Type checking
+      run: yarn check-types
+
+    - name: Stylelint
+      run: yarn stylelint
+
+    - name: Run unit tests
+      run: yarn test
+
+    - name: Install Playwright (used for Storybook and E2E tests)
+      run: npx playwright install --with-deps
+
+    - name: Run storybook tests
+      run: yarn test-storybook:ci
+
+    - name: Build
+      run: yarn build

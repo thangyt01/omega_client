@@ -1,6 +1,7 @@
-import type { Preview } from '@storybook/react';
-import { withThemeByClassName } from '@storybook/addon-themes';
 import '../src/app/globals.css'; // replace with the name of your tailwind css file
+
+import { withThemeByClassName } from '@storybook/addon-themes';
+import type { Preview } from '@storybook/react';
 
 const preview: Preview = {
   parameters: {

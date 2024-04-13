@@ -1,8 +1,6 @@
-import { FC } from 'react';
-import {
-  AccordionItem as NextUIAccordionItem,
-  AccordionItemProps as NextUIAccordionItemProps,
-} from '@nextui-org/react';
+import type { AccordionItemProps as NextUIAccordionItemProps } from '@nextui-org/react';
+import { AccordionItem as NextUIAccordionItem } from '@nextui-org/react';
+import type { FC } from 'react';
 
 export type AccordionItemProps = NextUIAccordionItemProps;
 

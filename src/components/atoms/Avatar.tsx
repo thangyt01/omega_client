@@ -1,8 +1,6 @@
-import {
-  AvatarProps as NextUIAvatarProps,
-  Avatar as NextUIAvatar,
-} from '@nextui-org/react';
-import { FC } from 'react';
+import type { AvatarProps as NextUIAvatarProps } from '@nextui-org/react';
+import { Avatar as NextUIAvatar } from '@nextui-org/react';
+import type { FC } from 'react';
 
 export type AvatarProps = NextUIAvatarProps;
 

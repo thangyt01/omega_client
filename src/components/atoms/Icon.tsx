@@ -1,19 +1,12 @@
-import {
-  FontAwesomeIcon,
-  FontAwesomeIconProps,
-} from '@fortawesome/react-fontawesome';
-import React, { FunctionComponent, HTMLAttributes, Fragment } from 'react';
-import css from 'styled-jsx/css';
-
-const styles = css``;
+import type { FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { FunctionComponent, HTMLAttributes } from 'react';
+import React from 'react';
 
 export type IconProps = HTMLAttributes<HTMLElement> & FontAwesomeIconProps;
 
 const Icon: FunctionComponent<IconProps> = (props: IconProps) => (
-  <Fragment>
-    <FontAwesomeIcon {...props} />
-    <style jsx>{styles}</style>
-  </Fragment>
+  <FontAwesomeIcon className="size-4" {...props} />
 );
 
 export default Icon;

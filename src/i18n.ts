@@ -1,12 +1,12 @@
 import { notFound } from 'next/navigation';
 import { getRequestConfig } from 'next-intl/server';
 
-const locales: string[] = ['vi', 'en'];
+import { AppConfig } from './configs/AppConfig';
 
 export default getRequestConfig(async ({ locale }) => {
-  if (!locales.includes(locale)) notFound();
+  if (!AppConfig.locales.includes(locale)) notFound();
 
   return {
-    messages: (await import(`../locales/${locale}/${locale}.json`)).default,
+    messages: (await import(`../locales/${locale}.json`)).default,
   };
 });

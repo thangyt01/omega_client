@@ -1,15 +1,17 @@
-import { FC, Fragment } from 'react';
+import type { FC } from 'react';
+
 import Footer from '../organisms/Footer.pc';
-import { AppFrameProps } from './AppFrame';
+import Header from '../organisms/Header.pc';
+import type { AppFrameProps } from './AppFrame';
 
 const AppFrame: FC<AppFrameProps> = (props: AppFrameProps) => {
   const { children } = props;
   return (
-    <Fragment>
-      <header></header>
+    <>
+      <Header type="normal" />
       <main>{children}</main>
-      <Footer />
-    </Fragment>
+      <Footer type="normal" />
+    </>
   );
 };
 

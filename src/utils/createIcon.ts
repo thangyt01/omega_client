@@ -2,6 +2,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+
 import createIconDefinition from './createIconDefinition';
 
 library.add(fas);
@@ -212,3 +213,5 @@ export const streetViewIconDefinition = createIconDefinition(
 export const sunIconDefinition = createIconDefinition('fas', 'sun');
 export const moonIconDefinition = createIconDefinition('fas', 'moon');
 export const anchorIconDefinition = createIconDefinition('fas', 'anchor');
+
+export const searchIconDefinition = createIconDefinition('fas', 'search');

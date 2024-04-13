@@ -1,0 +1,70 @@
+{
+  "Top": {
+    "meta_title": "Sách Mới",
+    "meta_description": "Những cuốn sách mới nhất từ Omega.dev"
+  },
+  "Header": {
+    "title": "Omega.dev",
+    "description": "Thư Viện Sách Dành Cho Kỹ Sư",
+    "search": "Tìm kiếm",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "type_to_search": "Nhập từ khóa tìm kiếm",
+    "cart": "Giỏ hàng",
+    "language": "Ngôn ngữ",
+    "english": "Tiếng Anh",
+    "vietnamese": "Tiếng Việt",
+    "logout": "Đăng xuất"
+  },
+  "Footer": {
+    "title": "Read. Code. Repeat",
+    "description": "Thư Viện Sách Dành Cho Kỹ Sư",
+    "social": {
+      "facebook": "https://www.facebook.com/omegadevvn",
+      "twitter": "https://twitter.com/omegadevvn",
+      "youtube": "https://www.youtube.com/channel/UC9vLsnF6QPYuHd4jzVJb9Rg",
+      "github": ""
+    },
+    "rightsReserved": "Bản quyền thuộc về Omega.dev",
+    "aboutUs": {
+      "title": "Về Chúng Tôi",
+      "whoWeAre": "Giới thiệu chung",
+      "historical": "Lịch sử",
+      "teams": "Đội ngũ",
+      "VisionAndMission": "Tầm nhìn và sứ mệnh",
+      "contactUs": "Liên Hệ"
+    },
+    "privacyPolicy": {
+      "title": "Chính Sách Bảo Mật",
+      "informationSecurity": "Bảo mật thông tin",
+      "cookiePolicy": "Chính Sách Cookie",
+      "informationSharing": "Chia sẻ thông tin",
+      "legalCompliance": "Tuân thủ pháp luật",
+      "changesToThePrivacyPolicy": "Thay đổi chính sách bảo mật"
+    },
+    "help&Support": {
+      "title": "Hỗ trợ & Trợ giúp",
+      "customerSupport": "Hỗ trợ khách hàng",
+      "troubleshooting": "Khắc phục sự cố",
+      "reportAProblem": "Báo cáo sự cố",
+      "feedback": "Phản hồi",
+      "FAQs": "FAQs"
+    },
+    "termsOfService": {
+      "title": "Điều Khoản Dịch Vụ",
+      "termsOfUse": "Điều khoản sử dụng",
+      "paymentTerms": "Điều khoản thanh toán",
+      "serviceLevelAgreement": "Thỏa thuận cấp dịch vụ",
+      "serviceScope": "Phạm vi dịch vụ",
+      "refundPolicy": "Chính sách hoàn tiền"
+    }
+  },
+  "404": {
+    "go_to_home": "Trở về trang chủ",
+    "404_message": "Xin lỗi, trang bạn đang đến không thể tìm thấy."
+  },
+  "500": {
+    "go_to_home": "Trở về trang chủ",
+    "500_message": "Whoops, đã xảy ra lỗi trên máy chủ."
+  }
+}

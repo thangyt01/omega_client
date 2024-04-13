@@ -11,3 +11,4 @@ public/scripts/ie.js
 next-sitemap.js
 out
 !.storybook
+node_modules

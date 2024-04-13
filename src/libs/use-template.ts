@@ -1,20 +1,19 @@
 import { useUserAgent } from 'next-useragent';
-import { FC } from 'react';
-import { useUaContext } from './ua-context';
+import type { FC } from 'react';
 
-function useTemplateSwitch<T>(pc: FC<T>, sp: FC<T>) {
-  const uaFromContext = useUaContext();
-  const uaStr =
-    typeof window !== 'undefined'
-      ? window.navigator.userAgent
-      : uaFromContext.ua;
-  const ua = useUserAgent(uaStr);
+function useTemplateSwitch<T>(
+  pc: FC<T>,
+  sp: FC<T>,
+  ua: string,
+  isMobile: boolean,
+) {
+  const uaStr = typeof window !== 'undefined' ? window.navigator.userAgent : ua;
+  const userAgent = useUserAgent(uaStr);
 
-  if (uaFromContext.isMobile || (ua && ua.isMobile)) {
+  if (isMobile || (userAgent && userAgent.isMobile)) {
     return sp;
-  } else {
-    return pc;
   }
+  return pc;
 }
 
 export default useTemplateSwitch;
