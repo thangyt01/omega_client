@@ -1,5 +1,4 @@
 import type { FC } from 'react';
-import { Fragment } from 'react';
 
 import Footer from '../organisms/Footer.sp';
 import Header from '../organisms/Header.sp';
