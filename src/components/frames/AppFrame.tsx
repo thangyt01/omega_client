@@ -1,5 +1,8 @@
+import type { FC, ReactNode } from 'react';
+
+import type { UaProps } from '@/libs/ua.type';
 import useTemplateSwitch from '@/libs/use-template';
-import { FC, ReactNode } from 'react';
+
 import AppFramePc from './AppFrame.pc';
 import AppFrameSp from './AppFrame.sp';
 
@@ -8,10 +11,11 @@ export type AppFrameProps = {
   queryLoading?: boolean;
   mutationLoading?: boolean;
   children?: React.ReactNode;
-};
+} & UaProps;
 
-const AppFrame: FC<AppFrameProps> = (props: AppFrameProps) => {
-  return useTemplateSwitch(AppFramePc, AppFrameSp)(props);
+const AppFrame: FC<AppFrameProps> = (props) => {
+  const { ua, isMobile } = props;
+  return useTemplateSwitch(AppFramePc, AppFrameSp, ua, isMobile)(props);
 };
 
 export default AppFrame;

@@ -8,6 +8,7 @@ import {
   SpinnerPlacement,
 } from '../../src/components/atoms/enum';
 import React from 'react';
+import { userEvent, within, expect } from '@storybook/test';
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -118,6 +119,25 @@ IsDisabled.args = {
   ...defaultArgs,
   disabled: true,
 };
+
+/*
+ * See https://storybook.js.org/docs/writing-stories/play-function#working-with-the-canvas
+ * to learn more about using the canvasElement to query the DOM
+ */
+IsDisabled.play = async ({ args, canvasElement, step }) => {
+  /**
+   * Finds the canvas element within the given element.
+   * @param {HTMLElement} canvasElement - The element to search within.
+   * @returns {HTMLElement} - The canvas element found within the given element.
+   */
+  const canvas = within(canvasElement);
+
+  await step('Click the button', async () => {
+    userEvent.click(canvas.getByRole('button'));
+  });
+
+  await expect(canvas.getByRole('button')).toBeDisabled();
+}
 
 export const DisableRipple: Story = {};
 DisableRipple.args = {

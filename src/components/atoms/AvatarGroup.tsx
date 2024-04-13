@@ -1,8 +1,6 @@
-import { FC } from 'react';
-import {
-  AvatarGroupProps as NextUIAvatarGroupProps,
-  AvatarGroup as NextUIAvatarGroup,
-} from '@nextui-org/react';
+import type { AvatarGroupProps as NextUIAvatarGroupProps } from '@nextui-org/react';
+import { AvatarGroup as NextUIAvatarGroup } from '@nextui-org/react';
+import type { FC } from 'react';
 
 export type AvatarGroupProps = NextUIAvatarGroupProps;
 

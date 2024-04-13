@@ -1,16 +1,17 @@
 import createMiddleware from 'next-intl/middleware';
 
+import { AppConfig } from './configs/AppConfig';
+
 const middleware = createMiddleware({
   // Add locales you want in the app
-  locales: ['vi', 'en'],
-
+  locales: AppConfig.locales,
   // Default locale if no match
-  defaultLocale: 'vi',
+  defaultLocale: AppConfig.defaultLocale,
 });
 
 export default middleware;
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(vi|en)/:page*'],
+  matcher: ['/((?!_next).*)', '/', '/(vi|en)/:page*'],
 };

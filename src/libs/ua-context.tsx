@@ -1,19 +1,20 @@
-import { createContext, useContext, FunctionComponent, ReactNode } from 'react';
+'use client';
 
-const UaContext = createContext({
+import type { FC } from 'react';
+import { createContext, useContext, useMemo } from 'react';
+
+import type { UaContextType, UaProps } from './ua.type';
+
+const UaContext = createContext<UaContextType>({
   ua: '',
   isMobile: false,
 });
 
-export type UaProps = {
-  ua: string;
-  isMobile: boolean;
-  children?: ReactNode;
-};
+const UaProvider: FC<UaProps> = ({ ua, isMobile, children }) => {
+  const contextValue = useMemo(() => ({ ua, isMobile }), [ua, isMobile]);
 
-const UaProvider: FunctionComponent<UaProps> = ({ ua, isMobile, children }) => {
   return (
-    <UaContext.Provider value={{ ua, isMobile }}>{children}</UaContext.Provider>
+    <UaContext.Provider value={contextValue}>{children}</UaContext.Provider>
   );
 };
 

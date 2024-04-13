@@ -1,0 +1,49 @@
+{
+  "Footer": {
+    "title": "Read. Code. Repeat",
+    "description": "Library for Programmers Community",
+    "social": {
+      "facebook": "https://www.facebook.com/omegadevvn",
+      "twitter": "https://twitter.com/omegadevvn",
+      "youtube": "https://www.youtube.com/channel/UC9vLsnF6QPYuHd4jzVJb9Rg",
+      "github": ""
+    },
+    "rightsReserved": "Omega.dev. All rights reserved",
+    "aboutUs": {
+      "title": "About Us",
+      "whoWeAre": "Introduction",
+      "historical": "History",
+      "teams": "Teams",
+      "VisionAndMission": "Vision and Mission",
+      "contactUs": "Contact Us"
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "informationSecurity": "Information Security",
+      "cookiePolicy": "Cookie Policy",
+      "informationSharing": "Information Sharing",
+      "legalCompliance": "Legal Compliance",
+      "changesToThePrivacyPolicy": "Changes to the Privacy Policy"
+    },
+    "help&Support": {
+      "title": "Help & Support",
+      "customerSupport": "Customer Support",
+      "troubleshooting": "Troubleshooting",
+      "reportAProblem": "Report a Problem",
+      "feedback": "Feedback",
+      "FAQs": "FAQs"
+    },
+    "termsOfService": {
+      "title": "Terms of Service",
+      "termsOfUse": "Terms of Use",
+      "paymentTerms": "Payment Terms",
+      "serviceLevelAgreement": "Service Level Agreement",
+      "serviceScope": "Service Scope",
+      "refundPolicy": "Refund Policy"
+    }
+  },
+  "404": {
+    "go_to_home": "Go to Home",
+    "404_message": "Oops! Page not found"
+  }
+}

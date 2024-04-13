@@ -1,10 +1,10 @@
-import {
-  IconLookup,
+import type {
   IconDefinition,
-  findIconDefinition,
-  IconPrefix,
+  IconLookup,
   IconName,
+  IconPrefix,
 } from '@fortawesome/fontawesome-svg-core';
+import { findIconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 const createIconDefinition = (
   prefix: IconPrefix,
