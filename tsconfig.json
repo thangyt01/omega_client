@@ -43,7 +43,6 @@
       "@molecules/*": ["./src/components/molecules/*"],
       "@organisms/*": ["./src/components/organisms/*"],
       "@templates/*": ["./src/components/templates/*"],
-      "@configs": ["./src/configs"],
       "@/public/*": ["./public/*"]
     },
 

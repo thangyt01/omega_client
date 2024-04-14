@@ -3,84 +3,39 @@
 import Avatar from '@atoms/Avatar';
 import Select from '@atoms/Select';
 import SelectItem from '@atoms/SelectItem';
+import { useTranslations } from 'next-intl';
 import type { FC } from 'react';
 
 export type SelectLanguageProps = {};
 
 const SelectLanguage: FC<SelectLanguageProps> = () => {
+  const t = useTranslations();
+
   return (
-    <Select className="max-w-xs" label="Select country">
+    <Select className="max-w-sm">
       <SelectItem
-        key="argentina"
+        key="vietnamese"
         startContent={
           <Avatar
-            alt="Argentina"
+            alt="vietnamese"
             className="size-6"
-            src="https://flagcdn.com/ar.svg"
+            src="https://flagcdn.com/vn.svg"
           />
         }
       >
-        Argentina
+        {t('vi_language')}
       </SelectItem>
       <SelectItem
-        key="venezuela"
+        key="english"
         startContent={
           <Avatar
-            alt="Venezuela"
+            alt="english"
             className="size-6"
-            src="https://flagcdn.com/ve.svg"
+            src="https://flagcdn.com/gb-eng.svg"
           />
         }
       >
-        Venezuela
-      </SelectItem>
-      <SelectItem
-        key="brazil"
-        startContent={
-          <Avatar
-            alt="Brazil"
-            className="size-6"
-            src="https://flagcdn.com/br.svg"
-          />
-        }
-      >
-        Brazil
-      </SelectItem>
-      <SelectItem
-        key="switzerland"
-        startContent={
-          <Avatar
-            alt="Switzerland"
-            className="size-6"
-            src="https://flagcdn.com/ch.svg"
-          />
-        }
-      >
-        Switzerland
-      </SelectItem>
-      <SelectItem
-        key="germany"
-        startContent={
-          <Avatar
-            alt="Germany"
-            className="size-6"
-            src="https://flagcdn.com/de.svg"
-          />
-        }
-      >
-        Germany
-      </SelectItem>
-      <SelectItem
-        key="spain"
-        startContent={
-          <Avatar
-            alt="Spain"
-            className="size-6"
-            src="https://flagcdn.com/es.svg"
-          />
-        }
-      >
-        Spain
+        {t('en_language')}
       </SelectItem>
     </Select>
   );

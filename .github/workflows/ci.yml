@@ -2,9 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ master, develop ]
 
 jobs:
   build:
@@ -35,6 +33,11 @@ jobs:
 
     - name: Run unit tests
       run: yarn test
+
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v3
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
     - name: Install Playwright (used for Storybook and E2E tests)
       run: npx playwright install --with-deps
