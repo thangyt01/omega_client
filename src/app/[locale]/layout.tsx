@@ -2,7 +2,7 @@ import '../globals.css';
 
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { NextIntlClientProvider } from 'next-intl';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 import AppFrame from '@/components/frames/AppFrame';
 import { isMobileDevice } from '@/libs/ua-server';
@@ -19,11 +19,12 @@ interface RootLayoutProps {
 export default function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = params;
   const { ua, isMobile } = isMobileDevice();
+  const messages = useMessages();
 
   return (
     <html lang={locale} className="light">
       <body className={inter.className}>
-        <NextIntlClientProvider locale={locale}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <AppFrame ua={ua} isMobile={isMobile}>
               {children}

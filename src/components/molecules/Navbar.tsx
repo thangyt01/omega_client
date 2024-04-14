@@ -20,6 +20,7 @@ import { searchIconDefinition } from '@/utils/createIcon';
 import Button from '../atoms/Button';
 import Icon from '../atoms/Icon';
 import { TempLogo } from '../atoms/TempLogo';
+import SelectLanguage from './SelectLanguage';
 
 export type NavBarProps = NextUINavBarProps & {
   isLogined?: boolean;
@@ -53,7 +54,7 @@ const NavBar: FC<NavBarProps> = (props: NavBarProps) => {
             type="search"
           />
         </NavbarItem>
-        {/* <SelectLanguage /> */}
+        <SelectLanguage />
         {isLogined ? (
           <NavbarItem>
             <Dropdown placement="bottom-end">
