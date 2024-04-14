@@ -1,11 +1,10 @@
+import Button from '@atoms/Button';
+import Icon from '@atoms/Icon';
 import { Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
 import { type FC } from 'react';
 
 import { arrowLeftLookupIconDefinition } from '@/utils/createIcon';
-
-import Button from '../atoms/Button';
-import Icon from '../atoms/Icon';
 
 const Error404Text: FC = () => {
   const t = useTranslations('404');

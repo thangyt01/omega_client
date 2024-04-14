@@ -1,10 +1,9 @@
 'use client';
 
+import Avatar from '@atoms/Avatar';
+import Select from '@atoms/Select';
+import SelectItem from '@atoms/SelectItem';
 import type { FC } from 'react';
-
-import Avatar from '../atoms/Avatar';
-import Select from '../atoms/Select';
-import SelectItem from '../atoms/SelectItem';
 
 export type SelectLanguageProps = {};
 

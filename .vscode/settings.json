@@ -32,5 +32,6 @@
   "i18n-ally.localesPaths": ["src/locales"],
   "i18n-ally.keystyle": "nested",
   "files.insertFinalNewline": true,
-  "codium.codeCompletion.enable": true
+  "codium.codeCompletion.enable": true,
+  "cSpell.words": ["dribbble"]
 }
