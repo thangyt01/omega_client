@@ -1,3 +1,6 @@
+import Button from '@atoms/Button';
+import Icon from '@atoms/Icon';
+import TempLogo from '@atoms/TempLogo';
 import type { NavbarBrandProps as NextUINavBarProps } from '@nextui-org/react';
 import {
   Avatar,
@@ -17,18 +20,13 @@ import type { FC } from 'react';
 
 import { searchIconDefinition } from '@/utils/createIcon';
 
-import Button from '../atoms/Button';
-import Icon from '../atoms/Icon';
-import { TempLogo } from '../atoms/TempLogo';
-import SelectLanguage from './SelectLanguage';
-
 export type NavBarProps = NextUINavBarProps & {
-  isLogined?: boolean;
+  isLogged?: boolean;
 };
 
 const NavBar: FC<NavBarProps> = (props: NavBarProps) => {
+  const { isLogged } = props;
   const t = useTranslations('Header');
-  const { isLogined = false } = props;
 
   return (
     <NextUINavBar isBordered>
@@ -54,8 +52,8 @@ const NavBar: FC<NavBarProps> = (props: NavBarProps) => {
             type="search"
           />
         </NavbarItem>
-        <SelectLanguage />
-        {isLogined ? (
+        {/* <SelectLanguage /> */}
+        {isLogged ? (
           <NavbarItem>
             <Dropdown placement="bottom-end">
               <DropdownTrigger>

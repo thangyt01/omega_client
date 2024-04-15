@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const TempLogo = () => (
+const TempLogo = () => (
   <div className="text-teal-600">
     <svg
       className="h-8"
@@ -51,3 +51,5 @@ export const TempLogo = () => (
     </svg>
   </div>
 );
+
+export default TempLogo;
