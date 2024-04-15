@@ -6,7 +6,7 @@ const FooterNavigation = () => {
 
   const sections = [
     {
-      title: 'About Us',
+      title: t('aboutUs.title'),
       links: [
         { label: 'Who We Are', i18nKey: 'aboutUs.whoWeAre', href: '/' },
         { label: 'Historical', i18nKey: 'aboutUs.historical', href: '/' },
@@ -20,7 +20,7 @@ const FooterNavigation = () => {
       ],
     },
     {
-      title: 'Privacy Policy',
+      title: t('privacyPolicy.title'),
       links: [
         {
           label: 'Information Security',
@@ -50,7 +50,7 @@ const FooterNavigation = () => {
       ],
     },
     {
-      title: 'Help & Support',
+      title: t('help&Support.title'),
       links: [
         {
           label: 'Customer Support',
@@ -72,7 +72,7 @@ const FooterNavigation = () => {
       ],
     },
     {
-      title: 'Terms of Service',
+      title: t('termsOfService.title'),
       links: [
         {
           label: 'Terms of Use',
