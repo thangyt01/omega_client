@@ -45,5 +45,9 @@
   "404": {
     "go_to_home": "Go to Home",
     "404_message": "Oops! Page not found"
+  },
+  "500": {
+    "go_to_home": "Go to Home",
+    "500_message": "Oops! Something went wrong"
   }
 }
