@@ -1,10 +1,10 @@
 'use client';
 
-import { Select, SelectItem } from '@nextui-org/react';
+import Avatar from '@atoms/Avatar';
+import Select from '@atoms/Select';
+import SelectItem from '@atoms/SelectItem';
 import { useTranslations } from 'next-intl';
 import type { FC } from 'react';
-
-import Avatar from '../atoms/Avatar';
 
 export type SelectLanguageProps = {};
 

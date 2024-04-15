@@ -1,11 +1,10 @@
+import Button from '@atoms/Button';
+import Icon from '@atoms/Icon';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import type { FC } from 'react';
 
 import { arrowLeftLookupIconDefinition } from '@/utils/createIcon';
-
-import Button from '../atoms/Button';
-import Icon from '../atoms/Icon';
 
 const Error500Text: FC = () => {
   const t = useTranslations('500');

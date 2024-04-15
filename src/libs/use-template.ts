@@ -2,8 +2,8 @@ import { useUserAgent } from 'next-useragent';
 import type { FC } from 'react';
 
 function useTemplateSwitch<T>(
-  pc: FC<T>,
-  sp: FC<T>,
+  PC: FC<T>,
+  SP: FC<T>,
   ua: string,
   isMobile: boolean,
 ) {
@@ -11,9 +11,9 @@ function useTemplateSwitch<T>(
   const userAgent = useUserAgent(uaStr);
 
   if (isMobile || (userAgent && userAgent.isMobile)) {
-    return sp;
+    return SP;
   }
-  return pc;
+  return PC;
 }
 
 export default useTemplateSwitch;
