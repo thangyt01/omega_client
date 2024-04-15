@@ -66,5 +66,7 @@
   "500": {
     "go_to_home": "Trở về trang chủ",
     "500_message": "Whoops, đã xảy ra lỗi trên máy chủ."
-  }
+  },
+  "vi_language": "Tiếng Việt",
+  "en_language": "Tiếng Anh"
 }
