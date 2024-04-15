@@ -45,3 +45,6 @@ next-env.d.ts
 
 # storybook
 storybook-static
+
+chromatic.log
+chromatic-diagnostics.json
