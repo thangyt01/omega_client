@@ -47,7 +47,7 @@ jobs:
       run: yarn stylelint
 
     - name: Run unit tests
-      run: yarn test
+      run: yarn test | tee ./coverage.txt
 
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
@@ -69,3 +69,28 @@ jobs:
 
     - name: Build
       run: yarn build
+
+    - name: Jest Coverage Comment
+      # We don't need to post the Jest Coverage comment on Crowdin PRs and Dependabot PRs
+      # as in general they introduce no changes to the Unit Tests and the Codebase
+      # We reuse the checks from the Chromatic Deploy step as they're the same conditions
+      # This comments the current Jest Coverage Report containing JUnit XML reports
+      # and a Code Coverage Summary
+      if: |
+          github.event_name == 'push' ||
+          (github.event_name == 'pull_request_target' &&
+            startsWith(github.event.pull_request.head.ref, 'dependabot/') == false &&
+            github.event.pull_request.head.ref != 'chore/crowdin')
+      uses: MishaKav/jest-coverage-comment # v1.0.25
+      with:
+        coverage-summary-path: ./coverage/coverage-summary.json
+        title: My Jest Coverage Comment
+        summary-title: My Summary Title
+        badge-title: Coverage
+        hide-comment: false
+        create-new-comment: false
+        hide-summary: false
+        junitxml-title: My JUnit Title
+        junitxml-path: ./coverage/junit.xml
+        coverage-title: My Coverage Title
+        coverage-path: ./coverage.txt
