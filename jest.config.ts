@@ -15,6 +15,15 @@ const config: Config = {
     '^@/public/(.*)$': '<rootDir>/public/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  coverageReporters: [
+    'clover',
+    'json',
+    'lcov',
+    'text',
+    'json-summary',
+    'text-summary',
+  ],
+  reporters: ['default', ['jest-junit', { outputDirectory: 'coverage' }]],
   clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: [
