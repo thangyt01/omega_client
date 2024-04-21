@@ -1,4 +1,28 @@
 {
+  "Pages": {
+    "Register": {
+      "Title": "Đăng ký tài khoản cho Omega",
+      "WelcomeText": "Chào mừng bạn đến Nền tảng Omega! Tham gia cùng chúng tôi để tìm kiếm thông tin hữu ích cần thiết để cải thiện kỹ năng IT của bạn. Vui lòng điền thông tin của bạn vào biểu mẫu bên dưới để tiếp tục.",
+      "InputName": "Tên của bạn",
+      "InputEmail": "Địa chỉ email của bạn",
+      "InputAccountName": "Tên tài khoản",
+      "InputPassword": "Mật khẩu",
+      "InputPasswordConfirm": "Xác nhận mật khẩu",
+      "CheckboxTermsConfirm": "Tôi đồng ý Điểu khoản dịch vụ của Omega",
+      "RegisterButton": "Đăng ký",
+      "Validation": {
+        "NameRequired": "Tên là bắt buộc",
+        "EmailRequired": "Email là bắt buộc",
+        "AccountNameRequired": "Tên tài khoản là bắt buộc",
+        "PasswordRequired": "Mật khẩu là bắt buộc",
+        "PasswordConfirmationRequired": "Phải xác nhận mật khẩu",
+        "InvalidEmail": "Phải là một email hợp lệ",
+        "InvalidAccountName": "Tên tài khoản phải có ít nhất 3 kí tự",
+        "InvalidPassword": "Mật khẩu phải có ít nhất 6 kí tự",
+        "InvalidPasswordConfirmation": "Mật khẩu không khớp"
+      }
+    }
+  },
   "Top": {
     "meta_title": "Sách Mới",
     "meta_description": "Những cuốn sách mới nhất từ Omega.dev"
