@@ -46,8 +46,7 @@
     "react-hook-form": "^7.51.3",
     "styled-jsx": "^5.1.2",
     "ua-parser-js": "^1.0.37",
-    "zod": "^3.22.5",
-    "zod-validation-error": "^3.1.0"
+    "zod": "^3.22.5"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.24.1",

@@ -114,6 +114,7 @@ const FooterNavigation = () => {
                 <a
                   href={link.href}
                   className="text-gray-700 transition hover:opacity-75"
+                  aria-label={link.label}
                 >
                   {link.content}
                 </a>

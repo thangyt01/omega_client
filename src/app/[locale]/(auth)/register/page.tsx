@@ -59,9 +59,10 @@ export default function Register() {
 
   const onServerAction = async (formData: FormData) => {
     const valid = await trigger();
-    if (valid) {
-      registerAction(formData);
+    if (!valid) {
+      return;
     }
+    registerAction(formData);
   };
 
   return (
