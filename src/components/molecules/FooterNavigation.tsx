@@ -8,15 +8,15 @@ const FooterNavigation = () => {
     {
       title: t('aboutUs.title'),
       links: [
-        { label: 'Who We Are', i18nKey: 'aboutUs.whoWeAre', href: '/' },
-        { label: 'Historical', i18nKey: 'aboutUs.historical', href: '/' },
-        { label: 'Teams', i18nKey: 'aboutUs.teams', href: '/' },
+        { label: 'Who We Are', content: t('aboutUs.whoWeAre'), href: '/' },
+        { label: 'Historical', content: t('aboutUs.historical'), href: '/' },
+        { label: 'Teams', content: t('aboutUs.teams'), href: '/' },
         {
           label: 'Vision and Mission',
-          i18nKey: 'aboutUs.VisionAndMission',
+          content: t('aboutUs.VisionAndMission'),
           href: '/',
         },
-        { label: 'Contact Us', i18nKey: 'aboutUs.contactUs', href: '/' },
+        { label: 'Contact Us', content: t('aboutUs.contactUs'), href: '/' },
       ],
     },
     {
@@ -24,27 +24,27 @@ const FooterNavigation = () => {
       links: [
         {
           label: 'Information Security',
-          i18nKey: 'privacyPolicy.informationSecurity',
+          content: t('privacyPolicy.informationSecurity'),
           href: '/',
         },
         {
           label: 'Cookie Policy',
-          i18nKey: 'privacyPolicy.cookiePolicy',
+          content: t('privacyPolicy.cookiePolicy'),
           href: '/',
         },
         {
           label: 'Information Sharing',
-          i18nKey: 'privacyPolicy.informationSharing',
+          content: t('privacyPolicy.informationSharing'),
           href: '/',
         },
         {
           label: 'Legal Compliance',
-          i18nKey: 'privacyPolicy.legalCompliance',
+          content: t('privacyPolicy.legalCompliance'),
           href: '/',
         },
         {
           label: 'Changes to the Privacy Policy',
-          i18nKey: 'privacyPolicy.changesToThePrivacyPolicy',
+          content: t('privacyPolicy.changesToThePrivacyPolicy'),
           href: '/',
         },
       ],
@@ -54,21 +54,21 @@ const FooterNavigation = () => {
       links: [
         {
           label: 'Customer Support',
-          i18nKey: 'help&Support.customerSupport',
+          content: t('help&Support.customerSupport'),
           href: '/',
         },
         {
           label: 'Troubleshooting',
-          i18nKey: 'help&Support.troubleshooting',
+          content: t('help&Support.troubleshooting'),
           href: '/',
         },
         {
           label: 'Report a Problem',
-          i18nKey: 'help&Support.reportAProblem',
+          content: t('help&Support.reportAProblem'),
           href: '/',
         },
-        { label: 'Feedback', i18nKey: 'help&Support.feedback', href: '/' },
-        { label: 'FAQs', i18nKey: 'help&Support.FAQs', href: '/' },
+        { label: 'Feedback', content: t('help&Support.feedback'), href: '/' },
+        { label: 'FAQs', content: t('help&Support.FAQs'), href: '/' },
       ],
     },
     {
@@ -76,27 +76,27 @@ const FooterNavigation = () => {
       links: [
         {
           label: 'Terms of Use',
-          i18nKey: 'termsOfService.termsOfUse',
+          content: t('termsOfService.termsOfUse'),
           href: '/',
         },
         {
           label: 'Payment Terms',
-          i18nKey: 'termsOfService.paymentTerms',
+          content: t('termsOfService.paymentTerms'),
           href: '/',
         },
         {
           label: 'Service Level Agreement',
-          i18nKey: 'termsOfService.serviceLevelAgreement',
+          content: t('termsOfService.serviceLevelAgreement'),
           href: '/',
         },
         {
           label: 'Service Scope',
-          i18nKey: 'termsOfService.serviceScope',
+          content: t('termsOfService.serviceScope'),
           href: '/',
         },
         {
           label: 'Refund Policy',
-          i18nKey: 'termsOfService.refundPolicy',
+          content: t('termsOfService.refundPolicy'),
           href: '/',
         },
       ],
@@ -114,8 +114,9 @@ const FooterNavigation = () => {
                 <a
                   href={link.href}
                   className="text-gray-700 transition hover:opacity-75"
+                  aria-label={link.label}
                 >
-                  {t(link.i18nKey)}
+                  {link.content}
                 </a>
               </li>
             ))}
