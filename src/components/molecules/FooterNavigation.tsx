@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
-import React from 'react';
+import React, { type FC, type PropsWithChildren } from 'react';
 
-const FooterNavigation = () => {
+const FooterNavigation: FC<PropsWithChildren> = () => {
   const t = useTranslations('Footer');
 
   const sections = [

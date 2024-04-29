@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import AppFrame from '@/components/frames/AppFrame.sp';
 import Error404Text from '@/components/organisms/404';
 
 export const metadata: Metadata = {
@@ -7,7 +8,11 @@ export const metadata: Metadata = {
 };
 
 function NotFoundPage() {
-  return <Error404Text />;
+  return (
+    <AppFrame>
+      <Error404Text />
+    </AppFrame>
+  );
 }
 
 export default NotFoundPage;

@@ -2,7 +2,23 @@
 
 import Error from 'next/error';
 
-export default function GlobalError(props: { params: { locale: string } }) {
+type GlobalErrorProps = {
+  params: {
+    locale: string;
+  };
+  error: Error;
+};
+
+function captureException(error: Error) {
+  // Capture exception
+  // todo: implement error capturing
+
+  // eslint-disable-next-line no-console
+  console.error(error);
+}
+
+export default function GlobalError(props: GlobalErrorProps) {
+  captureException(props.error);
   return (
     <html lang={props.params.locale}>
       <body>

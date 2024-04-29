@@ -1,3 +1,5 @@
+'use client';
+
 import type { SelectProps as NextUISelectProps } from '@nextui-org/react';
 import { Select as NextUISelect } from '@nextui-org/react';
 import type { FC } from 'react';
