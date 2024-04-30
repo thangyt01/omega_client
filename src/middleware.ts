@@ -13,5 +13,5 @@ export default middleware;
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/((?!_next).*)', '/', '/(vi|en)/:page*'],
+  matcher: ['/((?!_next|static|.*\\..*|assets).*)', '/', '/(vi|en)/:page*'],
 };
