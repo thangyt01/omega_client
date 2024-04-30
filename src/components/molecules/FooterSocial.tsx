@@ -1,10 +1,10 @@
 import Icon from '@atoms/Icon';
 import type { IconName } from '@fortawesome/fontawesome-svg-core';
-import React from 'react';
+import React, { type FC, type PropsWithChildren } from 'react';
 
 import createIconDefinition from '@/utils/createIconDefinition';
 
-const FooterSocial = () => {
+const FooterSocial: FC<PropsWithChildren> = () => {
   const socials = [
     {
       name: 'facebook',

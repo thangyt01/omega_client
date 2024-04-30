@@ -89,10 +89,10 @@ const NavBar: FC<NavBarProps> = (props: NavBarProps) => {
         ) : (
           <>
             <NavbarItem className="hidden lg:flex">
-              <Link href="/login">{t('login')}</Link>
+              <Link href="/sign-in">{t('login')}</Link>
             </NavbarItem>
             <NavbarItem>
-              <Button as={Link} color="primary" href="/register" variant="flat">
+              <Button as={Link} color="primary" href="/sign-up" variant="flat">
                 {t('register')}
               </Button>
             </NavbarItem>

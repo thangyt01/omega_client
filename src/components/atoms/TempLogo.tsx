@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { type FC } from 'react';
 
-const TempLogo = () => (
+const TempLogo: FC = () => (
   <div className="text-teal-600">
     <svg
       className="h-8"

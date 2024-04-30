@@ -4,7 +4,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
-import AppFrame from '@/components/frames/AppFrame';
+import type { ClientSharedServerContext } from '@/@types/server';
+import { setClientContext } from '@/client-context';
 import { isMobileDevice } from '@/libs/ua-server';
 
 import { Providers } from './providers';
@@ -21,14 +22,21 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
   const { ua, isMobile } = isMobileDevice();
   const messages = useMessages();
 
+  const sharedContext = {
+    ua,
+    isMobile,
+    locale,
+  } satisfies ClientSharedServerContext;
+
+  setClientContext(sharedContext);
+
   return (
     <html lang={locale} className="light">
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
-            <AppFrame ua={ua} isMobile={isMobile}>
-              {children}
-            </AppFrame>
+            {children}
+            {/* <AppFrame /> */}
           </Providers>
         </NextIntlClientProvider>
       </body>

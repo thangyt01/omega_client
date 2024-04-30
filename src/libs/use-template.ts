@@ -1,12 +1,11 @@
 import { useUserAgent } from 'next-useragent';
 import type { FC } from 'react';
 
-function useTemplateSwitch<T>(
-  PC: FC<T>,
-  SP: FC<T>,
-  ua: string,
-  isMobile: boolean,
-) {
+import { getClientContext } from '@/client-context';
+
+function useTemplateSwitch<T>(PC: FC<T>, SP: FC<T>) {
+  const { ua, isMobile } = getClientContext();
+
   const uaStr = typeof window !== 'undefined' ? window.navigator.userAgent : ua;
   const userAgent = useUserAgent(uaStr);
 
