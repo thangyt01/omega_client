@@ -1,15 +1,22 @@
 import type { DividerProps as NextUIDividerProps } from '@nextui-org/react';
 import { Divider as NextUIDivider } from '@nextui-org/react';
-import type { FC, PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
-export type DividerProps = NextUIDividerProps & PropsWithChildren;
+export type DividerProps = NextUIDividerProps &
+  PropsWithChildren & {
+    'data-testid'?: string;
+  };
 
-const Divider: FC<DividerProps> = (props: DividerProps) => {
+function Divider(props: DividerProps): JSX.Element {
   const { orientation = 'horizontal', ...rest } = props;
   // todo: implement dark theme
 
   return (
-    <div className="relative flex items-center py-5">
+    <div
+      // for testing purposes
+      data-testid={rest['data-testid']}
+      className="relative flex items-center py-5"
+    >
       {orientation === 'horizontal' ? (
         <>
           <div className="grow  border-t-1 border-gray-400" />
@@ -21,6 +28,6 @@ const Divider: FC<DividerProps> = (props: DividerProps) => {
       )}
     </div>
   );
-};
+}
 
 export default Divider;
