@@ -19,8 +19,10 @@
   ],
   "typescript.preferences.preferTypeOnlyAutoImports": true, // Prefer type-only imports
   "jest.runMode": {
-    "type": "on-save",
-    "testFileOnly": true,
+    "type": "on-demand",
+    // on-save is not recommended because it can be slow for large projects
+    // "type": "on-save",
+    // "testFileOnly": true,
     "coverage": true
   }, // Configure Jest extension
   // Multiple language settings for json and jsonc files
@@ -29,7 +31,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "prettier.ignorePath": ".gitignore", // Don't run prettier for files listed in .gitignore
-  "i18n-ally.localesPaths": ["src/locales"],
+  "i18n-ally.localesPaths": ["locales/*.{json,yaml,yml}"],
   "i18n-ally.keystyle": "nested",
   "files.insertFinalNewline": true,
   "codium.codeCompletion.enable": true
