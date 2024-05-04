@@ -1,4 +1,4 @@
-const getBaseUrl = () => {
+export const getBaseUrl = () => {
   if (process.env.NEXT_PUBLIC_APP_URL) {
     return process.env.NEXT_PUBLIC_APP_URL;
   }
